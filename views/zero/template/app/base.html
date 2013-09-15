@@ -1,0 +1,32 @@
+{% spaceless %}
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6" lang="es"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7" lang="es"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8" lang="es"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="es"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="es"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}{% endblock %} | Zero</title>
+        <!-- Inicio de CSS Global -->
+
+        <!-- Fin de CSS Global -->
+        {% block css_extra %}{% endblock %}
+    </head>
+
+    <body>
+        <div id="wrapper">
+            {% include 'app/header.html' %}
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+            {% include 'app/footer.html' %}
+        </div>
+        <!-- Inicio de JS Global -->
+
+        <!-- Fin de JS Global -->
+        {% block js_extra %}{% endblock %}
+    </body>
+</html>
+{% endspaceless %}
